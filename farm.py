@@ -1,24 +1,18 @@
-# Welcome to your turnip farm
-# Please select one of the following options:
-# 1. Plant a seed
-# 2. Harvest a turnip
-# 3. View your turnips
 
-# Output
-# 1. You planted a seed
-# 2. You harvested a turnip
-# 3.1 You don't have any turnips. Plant and harvest turnips to view them here.
-# 3.2 Your turnips: 1 / You have 1 turnips
-# 4. (anything else) You goofball! Select 1 or 2 or 3 from the menu.
+# System packages
+import os.path
 
-from farm_functions import plant_turnip, harvest_turnip, view_turnips
+# External packages
 
-print("Welcome to your turnip farm!")
+# Imports of our own functions
+from farm_functions import plant_crop, harvest_crop, view_crops
 
-def create_menu():
-    print("Enter 1 to plant a turnip.")
-    print("Enter 2 to harvest a turnip.")
-    print("Enter 3 to view your turnips.")
+print("Welcome to your farm!")
+
+def farm_menu():
+    print("Enter 1 to plant a crop.")
+    print("Enter 2 to harvest a crop.")
+    print("Enter 3 to view your crops.")
     print("Enter 4 to leave your farm.")
 
     user_choice = input("Enter your selection: ")
@@ -26,20 +20,47 @@ def create_menu():
 
 file_name = "list.csv"
 
+if (not os.path.isfile(file_name)):
+    farm_file = open(file_name, "w")
+    farm_file.write("crop,amount\n")
+    farm_file.close()
+
 choice = ""
 
 while choice != "4":
-    choice = create_menu()
+    choice = farm_menu()
 
     if (choice == "1"):
-        plant_turnip()
+        plant_crop()
     elif (choice == "2"):
-        harvest_turnip()
+        harvest_crop()
     elif (choice == "3"):
-        view_turnips()
+        view_crops()
     elif (choice == "4"):
         print("You entered 4.")
     else:
         print("You goofball! Select 1 or 2 or 3 or 4 from the menu.")
 
 print("See ya later, farmer!")
+
+# Entered 1 in main menu
+# def plant_crop():
+#     crop_choice = ""
+
+# while crop_choice != "4":
+#     crop_choice = plant_crop()
+
+#     if (crop_choice == "Turnip"):
+#         print("You planted a turnip!")
+#     elif (crop_choice == "Carrot"):
+#         print("You planted a carrot!")
+#     elif (crop_choice == "Potato"):
+#         print("You planted a potato!")
+#     elif (crop_choice == "Exit"):
+#         print("Exiting to the main menu")
+#         farm_menu()
+#     else:
+#         print("You goofball! Select Turnip or Carrot or Potato or Exit from the menu.")
+    
+
+
