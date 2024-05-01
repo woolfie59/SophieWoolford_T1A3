@@ -24,7 +24,7 @@ if (not os.path.isfile(file_name)):
     farm_file = open(file_name, "w")
     farm_file.write("crop,amount\n")
     farm_file.close()
-
+    
 choice = ""
 
 while choice != "4":
@@ -42,25 +42,5 @@ while choice != "4":
         print("You goofball! Select 1 or 2 or 3 or 4 from the menu.")
 
 print("See ya later, farmer!")
-
-# Entered 1 in main menu
-# def plant_crop():
-#     crop_choice = ""
-
-# while crop_choice != "4":
-#     crop_choice = plant_crop()
-
-#     if (crop_choice == "Turnip"):
-#         print("You planted a turnip!")
-#     elif (crop_choice == "Carrot"):
-#         print("You planted a carrot!")
-#     elif (crop_choice == "Potato"):
-#         print("You planted a potato!")
-#     elif (crop_choice == "Exit"):
-#         print("Exiting to the main menu")
-#         farm_menu()
-#     else:
-#         print("You goofball! Select Turnip or Carrot or Potato or Exit from the menu.")
-    
 
 
