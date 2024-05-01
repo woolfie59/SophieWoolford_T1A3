@@ -4,7 +4,7 @@ import os.path
 
 # External packages
 
-# Imports of our own functions
+# Imports of own functions
 from farm_functions import plant_crop, harvest_crop, view_crops
 
 print("Welcome to your farm!")
@@ -24,7 +24,7 @@ if (not os.path.isfile(file_name)):
     farm_file = open(file_name, "w")
     farm_file.write("crop,amount\n")
     farm_file.close()
-    
+
 choice = ""
 
 while choice != "4":
