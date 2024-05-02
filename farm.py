@@ -1,6 +1,6 @@
 
 # System packages
-import os.path
+import os.path, csv
 
 # External packages
 
@@ -10,20 +10,20 @@ from farm_functions import plant_crop, harvest_crop, view_crops
 print("Welcome to your farm!")
 
 def farm_menu():
-    print("Enter 1 to plant a crop.")
-    print("Enter 2 to harvest a crop.")
-    print("Enter 3 to view your crops.")
-    print("Enter 4 to leave your farm.")
+    print("\n   Enter 1 to plant a crop.")
+    print("   Enter 2 to harvest a crop.")
+    print("   Enter 3 to view your crops.")
+    print("   Enter 4 to leave your farm.")
 
-    user_choice = input("Enter your selection: ")
+    user_choice = input("\nPlease enter your selection: ")
     return user_choice
 
-file_name = "list.csv"
+crop_yield = "list.csv"
 
-if (not os.path.isfile(file_name)):
-    farm_file = open(file_name, "w")
-    farm_file.write("crop,amount\n")
-    farm_file.close()
+if (not os.path.isfile(crop_yield)):
+    crop_yield = open(crop_yield, "w")
+    crop_yield.write("crop,amount\n")
+    crop_yield.close()
 
 choice = ""
 
@@ -37,10 +37,8 @@ while choice != "4":
     elif (choice == "3"):
         view_crops()
     elif (choice == "4"):
-        print("You entered 4.")
+        print(" Bye!")
     else:
-        print("You goofball! Select 1 or 2 or 3 or 4 from the menu.")
+        print("\n You goofball! Select 1 or 2 or 3 or 4 from the menu.")
 
-print("See ya later, farmer!")
-
-
+print(" See ya later, farmer!")
