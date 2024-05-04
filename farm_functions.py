@@ -1,28 +1,26 @@
 def plant_crop():
     crop_choice = get_crop_choice()
     while not crop_choice.startswith("e"):
-        print(crop_choice)
-
         if (crop_choice == "b"):
-            print("   You planted a broccoli!")
+            print("\n   You planted a \033[1mbroccoli!\033[0m")
         elif (crop_choice == "c"):
-            print("   You planted a carrot!")
+            print("\n   You planted a \033[1mcarrot!\033[0m")
         elif (crop_choice == "p"):
-            print("   You planted a potato!")
+            print("\n   You planted a \033[1mpotato!\033[0m")
         elif (crop_choice == "e"):
             print("   Exiting to the main menu")
             return
         else:
-            print("\nYou goofball! Enter b or c or p or e in the menu.\n")
+            print("\n   \033[91m\033[1mYou goofball! Enter b or c or p or e in the menu.\033[0m\n")
 
         crop_choice = get_crop_choice()
 
 def get_crop_choice():
     print("\nWhat would you like to do?\n")
-    print("   To plant a broccoli, enter: b")
-    print("   To plant a carrot, enter: c")
-    print("   To plant a potato, enter: p")
-    print("   To exit to main menu, enter: e")
+    print("   To plant a broccoli, enter: \033[1mb\033[0m")
+    print("   To plant a carrot, enter: \033[1mc\033[0m")
+    print("   To plant a potato, enter: \033[1mp\033[0m")
+    print("   To exit to main menu, enter: \033[1me\033[0m")
 
     return input("\nEnter you selection: ")
 
@@ -50,7 +48,7 @@ def display_csv_contents(file_name):
             for row in reader:
                 print(f"{row[0]}: {row[1]}")
     except FileNotFoundError:
-        print("\nYou goofball! Plant and harvest vegetables to view them here.")
+        print("\n   \033[91m\033[1mYou goofball! Plant and harvest vegetables to view them here.\033[0m")
 
 def harvest_crop():
     csv_file_name = "vegetable_counts.csv"
@@ -61,20 +59,20 @@ def harvest_crop():
         print(harvest_choice)
 
         if (harvest_choice == "b"):
-            print("   You harvested a broccoli! \U0001F966")
+            print("   You harvested a \033[1mbroccoli!\033[0m \U0001F966")
             vegetable_counts['broccoli'] += 1
         elif (harvest_choice == "c"):
-            print("   You harvested a carrot! \U0001F955")
+            print("   You harvested a \033[1mcarrot!\033[0m \U0001F955")
             vegetable_counts['carrot'] += 1
         elif (harvest_choice == "p"):
-            print("   You harvested a potato! \U0001F954")
+            print("   You harvested a \033[1mpotato!\033[0m \U0001F954")
             vegetable_counts['potato'] += 1
         elif (harvest_choice == "e"):
             print("   Exiting to the main menu")
             write_vegetable_counts_to_csv(csv_file_name, vegetable_counts)
             return
         else:
-            print("\nYou goofball! Enter b or c or p or e in the menu.\n")
+            print("\n   \033[91m\033[1mYou goofball! Enter b or c or p or e in the menu.\033[0m\n")
 
         harvest_choice = get_harvest_choice()
 
@@ -82,14 +80,14 @@ def harvest_crop():
 
 def get_harvest_choice():
     print("\nWhat would you like to do?\n")
-    print("To harvest a broccoli, enter: b")
-    print("To harvest a carrot, enter: c")
-    print("To harvest a potato, enter: p")
-    print("To exit to main menu, enter: e")
+    print("To harvest a broccoli, enter: \033[1mb\033[0m")
+    print("To harvest a carrot, enter: \033[1mc\033[0m")
+    print("To harvest a potato, enter: \033[1mp\033[0m")
+    print("To exit to main menu, enter: \033[1me\033[0m")
 
     return input("\nEnter you selection: ")
 
 def view_crops():
-    print("\nHere are your vegetables!")
+    print("\n\033[1mHere are your vegetables!")
     csv_file_name = "vegetable_counts.csv"
     display_csv_contents(csv_file_name)
