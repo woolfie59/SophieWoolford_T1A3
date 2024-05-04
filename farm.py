@@ -1,4 +1,3 @@
-
 # System packages
 import os.path, csv
 
@@ -20,18 +19,11 @@ def farm_menu():
     user_choice = input("\nPlease enter your selection: ")
     return user_choice
 
-# crop_yield = "list.csv"
-
-# if (not os.path.isfile(crop_yield)):
-#     crop_yield = open(crop_yield, "w")
-#     crop_yield.write("crop,amount\n")
-#     crop_yield.close()
-
 choice = ""
 
+# While loop for main menu selections
 while choice != "4":
     choice = farm_menu()
-
     if (choice == "1"):
         plant_crop()
     elif (choice == "2"):
@@ -43,4 +35,5 @@ while choice != "4":
     else:
         print("\n   \033[91m\033[1mYou goofball! Select 1 or 2 or 3 or 4 from the menu.\033[0m")
 
+# Exit message
 print("See ya later, farmer! \U0001F920")

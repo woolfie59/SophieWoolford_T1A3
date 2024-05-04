@@ -1,3 +1,4 @@
+# Main menu selection 1 -> sub-menu plant menu, def with while loop
 def plant_crop():
     crop_choice = get_crop_choice()
     while not crop_choice.startswith("e"):
@@ -15,6 +16,7 @@ def plant_crop():
 
         crop_choice = get_crop_choice()
 
+# Selectors for plant menu
 def get_crop_choice():
     print("\nWhat would you like to do?\n")
     print("   To plant a \033[1mbroccoli\033[0m, enter: \033[1mb\033[0m")
@@ -24,6 +26,7 @@ def get_crop_choice():
 
     return input("\nEnter you selection: ")
 
+# Creation of csv file for harvest count
 import csv
 
 def read_vegetable_counts_from_csv(file_name):
@@ -50,6 +53,8 @@ def display_csv_contents(file_name):
     except FileNotFoundError:
         print("\n   \033[91m\033[1mYou goofball! Plant and harvest vegetables to view them here.\033[0m")
 
+# Main menu selection 2 -> sub-menu harvest menu, def with while loop
+# Reads user input and adds to csv file to keep count of amount of harvested vegetables
 def harvest_crop():
     csv_file_name = "vegetable_counts.csv"
     vegetable_counts = read_vegetable_counts_from_csv(csv_file_name)
@@ -76,6 +81,7 @@ def harvest_crop():
 
     write_vegetable_counts_to_csv(csv_file_name, vegetable_counts)
 
+# Harvest menu printed to user
 def get_harvest_choice():
     print("\nWhat would you like to do?\n")
     print("To harvest a \033[1mbroccoli\033[0m, enter: \033[1mb\033[0m")
@@ -85,6 +91,7 @@ def get_harvest_choice():
 
     return input("\nEnter you selection: ")
 
+# Main menu selection 2 -> view crops, through csv file handling
 def view_crops():
     print("\n\033[1mHere are your vegetables!\033[0m \U0001F966 \U0001F955 \U0001F954")
     csv_file_name = "vegetable_counts.csv"
