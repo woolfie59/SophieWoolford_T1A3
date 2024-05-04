@@ -56,19 +56,17 @@ def harvest_crop():
 
     harvest_choice = get_harvest_choice()
     while not harvest_choice.startswith("e"):
-        print(harvest_choice)
-
         if (harvest_choice == "b"):
-            print("   You harvested a \033[1mbroccoli!\033[0m \U0001F966")
+            print("\n   You harvested a \033[1mbroccoli!\033[0m \U0001F966")
             vegetable_counts['broccoli'] += 1
         elif (harvest_choice == "c"):
-            print("   You harvested a \033[1mcarrot!\033[0m \U0001F955")
+            print("\n   You harvested a \033[1mcarrot!\033[0m \U0001F955")
             vegetable_counts['carrot'] += 1
         elif (harvest_choice == "p"):
-            print("   You harvested a \033[1mpotato!\033[0m \U0001F954")
+            print("\n   You harvested a \033[1mpotato!\033[0m \U0001F954")
             vegetable_counts['potato'] += 1
         elif (harvest_choice == "e"):
-            print("   Exiting to the main menu")
+            print("\n   Exiting to the main menu")
             write_vegetable_counts_to_csv(csv_file_name, vegetable_counts)
             return
         else:
