@@ -10,10 +10,10 @@ from farm_functions import plant_crop, harvest_crop, view_crops
 print("\n\033[1mWelcome to your farm! \U0001F920 \U0001F331\033[0m")
 
 def farm_menu():
-    print("\nEnter \033[1m1\033[0m to \033[1mplant\033[0m a crop.")
-    print("Enter \033[1m2\033[0m to \033[1mharvest\033[0m a crop.")
-    print("Enter \033[1m3\033[0m to \033[1mview\033[0m your crops.")
-    print("Enter \033[1m4\033[0m to \033[1mleave\033[0m your farm.")
+    print("\nTo \033[1mplant\033[0m a crop, enter \033[1m1\033[0m.")
+    print("To \033[1mharvest\033[0m a crop, enter \033[1m2\033[0m.")
+    print("To \033[1mview\033[0m your crops, enter \033[1m3\033[0m.")
+    print("To \033[1mleave\033[0m your farm, enter \033[1m4\033[0m.")
 
     user_choice = input("\nPlease enter your selection: ")
     return user_choice

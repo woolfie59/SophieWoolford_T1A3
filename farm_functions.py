@@ -17,10 +17,10 @@ def plant_crop():
 
 def get_crop_choice():
     print("\nWhat would you like to do?\n")
-    print("   To plant a broccoli, enter: \033[1mb\033[0m")
-    print("   To plant a carrot, enter: \033[1mc\033[0m")
-    print("   To plant a potato, enter: \033[1mp\033[0m")
-    print("   To exit to main menu, enter: \033[1me\033[0m")
+    print("   To plant a \033[1mbroccoli\033[0m, enter: \033[1mb\033[0m")
+    print("   To plant a \033[1mcarrot\033[0m, enter: \033[1mc\033[0m")
+    print("   To plant a \033[1mpotato\033[0m, enter: \033[1mp\033[0m")
+    print("   To \033[1mexit\033[0m to main menu, enter: \033[1me\033[0m")
 
     return input("\nEnter you selection: ")
 
@@ -80,14 +80,14 @@ def harvest_crop():
 
 def get_harvest_choice():
     print("\nWhat would you like to do?\n")
-    print("To harvest a broccoli, enter: \033[1mb\033[0m")
-    print("To harvest a carrot, enter: \033[1mc\033[0m")
-    print("To harvest a potato, enter: \033[1mp\033[0m")
-    print("To exit to main menu, enter: \033[1me\033[0m")
+    print("To harvest a \033[1mbroccoli\033[0m, enter: \033[1mb\033[0m")
+    print("To harvest a \033[1mcarrot\033[0m, enter: \033[1mc\033[0m")
+    print("To harvest a \033[1mpotato\033[0m, enter: \033[1mp\033[0m")
+    print("To \033[1mexit\033[0m to main menu, enter: \033[1me\033[0m")
 
     return input("\nEnter you selection: ")
 
 def view_crops():
-    print("\n\033[1mHere are your vegetables!")
+    print("\n\033[1mHere are your vegetables!\033[0m")
     csv_file_name = "vegetable_counts.csv"
     display_csv_contents(csv_file_name)
