@@ -86,6 +86,6 @@ def get_harvest_choice():
     return input("\nEnter you selection: ")
 
 def view_crops():
-    print("\n\033[1mHere are your vegetables!\033[0m")
+    print("\n\033[1mHere are your vegetables!\033[0m \U0001F966 \U0001F955 \U0001F954")
     csv_file_name = "vegetable_counts.csv"
     display_csv_contents(csv_file_name)
