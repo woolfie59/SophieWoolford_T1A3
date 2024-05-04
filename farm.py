@@ -7,13 +7,13 @@ import os.path, csv
 # Imports of own functions
 from farm_functions import plant_crop, harvest_crop, view_crops
 
-print("Welcome to your farm!")
+print("Welcome to your farm! \U0001F920 \U0001F331")
 
 def farm_menu():
-    print("\n   Enter 1 to plant a crop.")
-    print("   Enter 2 to harvest a crop.")
-    print("   Enter 3 to view your crops.")
-    print("   Enter 4 to leave your farm.")
+    print("\nEnter 1 to plant a crop.")
+    print("Enter 2 to harvest a crop.")
+    print("Enter 3 to view your crops.")
+    print("Enter 4 to leave your farm.")
 
     user_choice = input("\nPlease enter your selection: ")
     return user_choice
@@ -37,8 +37,8 @@ while choice != "4":
     elif (choice == "3"):
         view_crops()
     elif (choice == "4"):
-        print(" Bye!")
+        print("\nYou're leaving.")
     else:
-        print("\n You goofball! Select 1 or 2 or 3 or 4 from the menu.")
+        print("\nYou goofball! Select 1 or 2 or 3 or 4 from the menu.")
 
-print(" See ya later, farmer!")
+print("See ya later, farmer!")
