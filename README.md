@@ -46,7 +46,10 @@ Display crops: The 'display_csv_content()' function reads the CSV file and displ
 
 ## R8 Help documentation
 ### To install the application
-- 
+- Open terminal. If using Windows, make sure to open terminal in WSL
+- Make sure Python3 is installed - to check your Python version, run 'python3 -- version'
+- Make run.sh file executable with 'chmod +x run.sh'
+- Run the run.sh file to launch application
 
 ### Dependencies
 - Rich
