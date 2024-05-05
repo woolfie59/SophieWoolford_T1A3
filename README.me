@@ -2,6 +2,7 @@
 https://peps.python.org/pep-0008/
 https://github.com/Textualize/rich
 https://realpython.com/python-csv/
+https://www.markdownguide.org/extended-syntax/
 
 ## R4 GitHub repository
 https://github.com/woolfie59/SophieWoolford_T1A3
@@ -10,17 +11,20 @@ https://github.com/woolfie59/SophieWoolford_T1A3
 Reference the chosen style guide appropriately.
 - Following PEP8 style guide.
 - Rich library.
-- All defs and variables etc. are written using snake_case.
+- All defs, functions, and variables etc. are written using snake_case.
 - Comments added for each section of code using "# 'comment'".
 
 ## R6 Application features
-- at least THREE features
-- describe each feature, providing a walkthrough of the logic of the application.
-Note: Ensure that your features above allow you to demonstrate your understanding of the following language elements and concepts:
-- use of variables and the concept of variable scope
-- loops and conditional control structures
-- error handling
-Answer: 
+This application is a farming simulation game for a terminal. It consists of three main freatures; planting a crop, harvesting a crop, and viewing crops. Upon starting the program, the user is shown a welcome message and a menu of choices. This is the main menu of the program. The menu options presented are the three features; plant, harvest, view, as well as an option to exit the program.
+The first feature allows the user to plant one of three crops (broccoli, carrot, and potato). The selections is done from a menu which lists the three vegetables available to plant. The application then provides feedback to the user depending on what choice is made. The flow works as follows:
+1. Menu: The `get_crop_choice()` function displays a menu of vegetables for the user to choose from to plant.
+2. User input: The user is prompted to enter their selection. Error handling is in place to allow either uppercase or lowercase input which matches the options.
+3. Processing input: The `plant_crop()` functions takes the user input, converts it to lowercase if uppercase was used, and then executes the corresponding action based on the chosen option.
+4 Feedback: The program provides the user with feedback, a confirmation of whcihc vegetable has been planted. If an invalid input was made, an error message is displayed.
+5 Looping: The program runs the loop the user ends it by selecting 'Exit' in the menu. Chosing to exit takes the user back to the main menu.
+
+The second feature is the harvesting option.
+The third and last feature is the view crops feature.
 
 ## R7 Implementation plan
 
