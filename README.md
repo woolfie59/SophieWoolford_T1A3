@@ -1,10 +1,10 @@
 # T1A3 Terminal Application by Sophie Woolford
 
 ## R3 Referenced sources
-https://peps.python.org/pep-0008/
-https://github.com/Textualize/rich
-https://realpython.com/python-csv/
-https://www.markdownguide.org/extended-syntax/
+- https://peps.python.org/pep-0008/
+- https://github.com/Textualize/rich
+- https://realpython.com/python-csv/
+- https://www.markdownguide.org/extended-syntax/
 
 
 ## R4 GitHub repository
@@ -41,6 +41,7 @@ The third and last feature is the "View Crops" feature. This allows the user to 
 CSV file handling: The 'read_vegetable_counts_from_csv()' function reads the counts of vegetables from the CSV file 'vegetable_counts.csv'. This file is created when the user first harvests a vegetable in the "Harvest Crop" menu. If the user has not yet harvested a vegetable, an error message is displayed, prompting the user to plant and harvest a vegetable.
 Display crops: The 'display_csv_content()' function reads the CSV file and displays the content to the user. The type of vegetable is show, along with the amount. If any vegetable has not been harvested yet, the counts is displayed as 0. At please one of either vegetable needs to have been harvested to view the CSV file. The 'view_crops()' function prints a header to indicate the "vegetable" and "count" columns, and calls the 'display_csv_content()' to show the count.
 
+### Flowchart
 
 ## R7 Implementation plan
 - outlines how each feature will be implemented and a checklist of tasks for each feature
