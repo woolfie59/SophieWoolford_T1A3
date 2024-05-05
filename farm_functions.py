@@ -24,11 +24,11 @@ def plant_crop():
 
 # Selectors for plant menu
 def get_crop_choice():
-    print("\nWhat would you like to do?\n")
-    print("   To plant a [bold]broccoli[/bold], enter: [bold]B[/bold]")
-    print("   To plant a [bold]carrot[/bold], enter: [bold]C[/bold]")
-    print("   To plant a [bold]potato[/bold], enter: [bold]P[/bold]")
-    print("   To [bold]exit[/bold] to main menu, enter: [bold]E[/bold]")
+    print("\n   What would you like to do?")
+    print("To plant a [bold]broccoli[/bold], enter: [bold]B[/bold]")
+    print("To plant a [bold]carrot[/bold], enter: [bold]C[/bold]")
+    print("To plant a [bold]potato[/bold], enter: [bold]P[/bold]")
+    print("To [bold]exit[/bold] to main menu, enter: [bold]E[/bold]")
 
     return input("\nEnter you selection: ")
 
@@ -82,7 +82,7 @@ def harvest_crop():
             write_vegetable_counts_to_csv(csv_file_name, vegetable_counts)
             return
         else:
-            print("\n   [bold red]You goofball! Enter b or c or p or e in the menu.[/bold red]\n")
+            print("\n   [bold red]You goofball! Enter B or C or P or E in the menu.[/bold red]\n")
 
         harvest_choice = get_harvest_choice()
 
@@ -90,7 +90,7 @@ def harvest_crop():
 
 # Harvest menu printed to user
 def get_harvest_choice():
-    print("\nWhat would you like to do?\n")
+    print("\n   What would you like to do?")
     print("To harvest a [bold]broccoli[/bold], enter: [bold]B[/bold]")
     print("To harvest a [bold]carrot[/bold], enter: [bold]C[/bold]")
     print("To harvest a [bold]potato[/bold]m, enter: [bold]P[/bold]")

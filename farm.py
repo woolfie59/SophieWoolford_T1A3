@@ -41,4 +41,4 @@ while choice != "4":
         print("\n   [bold red]You goofball! Select 1 or 2 or 3 or 4 from the menu.[/bold red]")
 
 # Exit message
-print("See ya later, farmer!", ":cowboy_hat_face:")
+print("See ya later, farmer!", ":cowboy_hat_face:\n")
