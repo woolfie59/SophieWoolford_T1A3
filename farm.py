@@ -2,19 +2,24 @@
 import os.path, csv
 
 # External packages
+import rich
+from rich import print
+from rich.console import Console
+
+console = Console()
 
 # Imports of own functions
 from farm_functions import plant_crop, harvest_crop, view_crops
 
 # Welcome message
-print("\n\033[1mWelcome to your farm! \U0001F920 \U0001F331\033[0m")
+print("\n[bold]Welcome to your farm![/bold]", ":cowboy_hat_face:", ":seedling:")
 
 # Main menu
 def farm_menu():
-    print("\nTo \033[1mplant\033[0m a crop, enter \033[1m1\033[0m.")
-    print("To \033[1mharvest\033[0m a crop, enter \033[1m2\033[0m.")
-    print("To \033[1mview\033[0m your crops, enter \033[1m3\033[0m.")
-    print("To \033[1mleave\033[0m your farm, enter \033[1m4\033[0m.")
+    print("\nTo [bold]plant[/bold] a crop, enter [bold]1[/bold].")
+    print("To [bold]harvest[/bold] a crop, enter [bold]2[/bold].")
+    print("To [bold]view[/bold] your crops, enter [bold]3[/bold].")
+    print("To [bold]leave[/bold] your farm, enter [bold]4[/bold].")
 
     user_choice = input("\nPlease enter your selection: ")
     return user_choice
@@ -33,7 +38,7 @@ while choice != "4":
     elif (choice == "4"):
         print("\nYou're leaving.")
     else:
-        print("\n   \033[91m\033[1mYou goofball! Select 1 or 2 or 3 or 4 from the menu.\033[0m")
+        print("\n   [bold red]You goofball! Select 1 or 2 or 3 or 4 from the menu.[/bold red]")
 
 # Exit message
-print("See ya later, farmer! \U0001F920")
+print("See ya later, farmer!", ":cowboy_hat_face:")
