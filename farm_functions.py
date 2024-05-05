@@ -2,6 +2,7 @@
 def plant_crop():
     crop_choice = get_crop_choice()
     while not crop_choice.startswith("e"):
+        crop_choice = crop_choice.lower() # Converts input to lowercase, user can use upper- or lowercase
         if (crop_choice == "b"):
             print("\n   You planted a \033[1mbroccoli!\033[0m")
         elif (crop_choice == "c"):
@@ -19,10 +20,10 @@ def plant_crop():
 # Selectors for plant menu
 def get_crop_choice():
     print("\nWhat would you like to do?\n")
-    print("   To plant a \033[1mbroccoli\033[0m, enter: \033[1mb\033[0m")
-    print("   To plant a \033[1mcarrot\033[0m, enter: \033[1mc\033[0m")
-    print("   To plant a \033[1mpotato\033[0m, enter: \033[1mp\033[0m")
-    print("   To \033[1mexit\033[0m to main menu, enter: \033[1me\033[0m")
+    print("   To plant a \033[1mbroccoli\033[0m, enter: \033[1mB\033[0m")
+    print("   To plant a \033[1mcarrot\033[0m, enter: \033[1mC\033[0m")
+    print("   To plant a \033[1mpotato\033[0m, enter: \033[1mP\033[0m")
+    print("   To \033[1mexit\033[0m to main menu, enter: \033[1mE\033[0m")
 
     return input("\nEnter you selection: ")
 
@@ -61,6 +62,7 @@ def harvest_crop():
 
     harvest_choice = get_harvest_choice()
     while not harvest_choice.startswith("e"):
+        harvest_choice = harvest_choice.lower() # Converts input to lowercase, user can use upper- or lowercase
         if (harvest_choice == "b"):
             print("\n   You harvested a \033[1mbroccoli!\033[0m \U0001F966")
             vegetable_counts['broccoli'] += 1
@@ -84,10 +86,10 @@ def harvest_crop():
 # Harvest menu printed to user
 def get_harvest_choice():
     print("\nWhat would you like to do?\n")
-    print("To harvest a \033[1mbroccoli\033[0m, enter: \033[1mb\033[0m")
-    print("To harvest a \033[1mcarrot\033[0m, enter: \033[1mc\033[0m")
-    print("To harvest a \033[1mpotato\033[0m, enter: \033[1mp\033[0m")
-    print("To \033[1mexit\033[0m to main menu, enter: \033[1me\033[0m")
+    print("To harvest a \033[1mbroccoli\033[0m, enter: \033[1mB\033[0m")
+    print("To harvest a \033[1mcarrot\033[0m, enter: \033[1mC\033[0m")
+    print("To harvest a \033[1mpotato\033[0m, enter: \033[1mP\033[0m")
+    print("To \033[1mexit\033[0m to main menu, enter: \033[1mE\033[0m")
 
     return input("\nEnter you selection: ")
 
