@@ -6,17 +6,14 @@
 - https://realpython.com/python-csv/
 - https://www.markdownguide.org/extended-syntax/
 
-
 ## R4 GitHub repository
 https://github.com/woolfie59/SophieWoolford_T1A3
-
 
 ## R5 Code style
 - Following PEP8 style guide.
 - Rich library.
 - All defs, functions, and variables etc. are written using snake_case.
 - Comments added for each section of code using "# 'comment'".
-
 
 ## R6 Application features
 This application is a farming simulation game for a terminal. It consists of three main features; "Plant Crop", "Harvest Crop", and "View Crops". Upon starting the program, the user is shown a welcome message and a menu of choices. This is the main menu of the program. The menu options presented are the three features; plant, harvest, view, as well as an option to exit the program.
@@ -45,24 +42,21 @@ Display crops: The 'display_csv_content()' function reads the CSV file and displ
 ![Python Farm Flowchart](https://github.com/woolfie59/Vegetable_Farm/assets/157570597/6744abf8-fba6-48d4-b729-767eb9605afb)
 
 ## R7 Implementation plan
-- outlines how each feature will be implemented and a checklist of tasks for each feature
-- prioritise the implementation of different features, or checklist items within a feature
-- provide a deadline, duration or other time indicator for each feature or checklist/checklist-item
-Utilise a suitable project management platform to track this implementation plan.
-your checklists for each feature should have at least 5 items.
-Answer: 
-
+![Python Farm Trello Board](https://github.com/woolfie59/Vegetable_Farm/assets/157570597/c886248a-4c94-4e4f-97c3-75d467722643)
 
 ## R8 Help documentation
-- To install the application
-    - 
+### To install the application
+- 
 
-- Dependencies
-    - Rich
+### Dependencies
+- Rich
 
-- System requirements
-    - MacOS/Linux/Windows
-    - Python 3.9 or newer version
+### System requirements
+- MacOS/Linux/Windows
+- Python 3.9 or newer version
 
-- how to use any command line arguments made for the application
-
+### Features
+- Choose to plant a vegetable by selecting 1 in the main menu. In the plant menu, select a vegetable to plant or go back to the main menu.
+- Choose to harvest a vegetable by selecting 2 in the main menu. In the harvest menu, select a vegetable to harvest or go back to the main menu.
+- Choose to view your crops, by selecting 3 in the main meny. This can only be done if a vegetable has been harvested.
+- Choose to exit the application by selecting 4.
